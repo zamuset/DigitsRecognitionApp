@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--DrawingVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DrawingVC" customModule="handwrittingRec" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the PREDICT button below." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mQ-dp-gMA">
+                                <rect key="frame" x="0.0" y="556" width="375" height="27.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hou-IK-zH0">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Hou-IK-zH0" secondAttribute="height" multiplier="1:1" id="q9X-Dc-wg1"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Predict-a-Digit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwP-r9-o9q">
+                                <rect key="frame" x="0.0" y="42" width="375" height="68"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.74901960779999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="au8-di-rmO">
+                                <rect key="frame" x="0.0" y="599.5" width="375" height="67.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.74901960779999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="PREDICT">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="predictBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yvP-yx-AEh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hou-IK-zH0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2aq-t0-yNu"/>
+                            <constraint firstItem="7mQ-dp-gMA" firstAttribute="top" secondItem="Hou-IK-zH0" secondAttribute="bottom" constant="35" id="7KR-fs-zne"/>
+                            <constraint firstItem="DwP-r9-o9q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="9pJ-xd-ggg"/>
+                            <constraint firstItem="DwP-r9-o9q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EdT-gZ-Kem"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="au8-di-rmO" secondAttribute="trailing" id="IsJ-8i-NnA"/>
+                            <constraint firstItem="7mQ-dp-gMA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="J3S-5x-HCm"/>
+                            <constraint firstItem="Hou-IK-zH0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VMR-3L-yiu"/>
+                            <constraint firstItem="Hou-IK-zH0" firstAttribute="top" secondItem="DwP-r9-o9q" secondAttribute="bottom" constant="36" id="XHw-Or-vq9"/>
+                            <constraint firstItem="Hou-IK-zH0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ax1-Ii-u99"/>
+                            <constraint firstItem="DwP-r9-o9q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bdU-bl-Iw5"/>
+                            <constraint firstItem="7mQ-dp-gMA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gz5-KL-R43"/>
+                            <constraint firstItem="au8-di-rmO" firstAttribute="top" secondItem="7mQ-dp-gMA" secondAttribute="bottom" constant="16" id="o9z-jF-WNr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="au8-di-rmO" secondAttribute="bottom" id="qpR-Qu-aTe"/>
+                            <constraint firstItem="au8-di-rmO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="z9v-9H-pQC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="drawingIV" destination="Hou-IK-zH0" id="NIw-Ya-ekW"/>
+                        <outlet property="predictionLbl" destination="7mQ-dp-gMA" id="ogY-6m-LNO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
